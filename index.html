@@ -3,9 +3,19 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Updated viewport for consistent scaling on iPhone -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Selin'in Doğumgünü Sayacı</title>
   <style>
+    html {
+      -webkit-text-size-adjust: 100%; /* Prevent iOS font scaling */
+      -ms-text-size-adjust: 100%;     /* Prevent IE mobile font scaling */
+    }
+
+    input, textarea, select, button {
+      font-size: 16px; /* Prevent zoom on form inputs in iOS */
+    }
+
     body {
       font-family: 'Arial', sans-serif;
       display: flex;
@@ -133,8 +143,7 @@
     <p>Bu yılın sana oldukça şans ve mutluluk getirmesi dileğiyle - Can</p>
   </div>
 
-  <div id="birthdayPhotos">
-  </div>
+  <div id="birthdayPhotos"></div>
 
   <!-- 🎀 Notes -->
   <img src="friends1.png" class="photo-note note1" />
